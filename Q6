@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip> // for std::fixed and std::setprecision
+using namespace std;
+
+int main() {
+    int numEmployees;
+    
+    cout << "Enter the number of employees: ";
+    cin >> numEmployees;
+
+    // Input validation
+    if(numEmployees <= 0) {
+        cout << "Number of employees must be positive." << endl;
+        return 1;
+    }
+
+    double basicSalary, bonus, netSalary;
+
+    cout << fixed << setprecision(2); // format output to 2 decimal places
+
+    for (int i = 1; i <= numEmployees; i++) {
+        cout
