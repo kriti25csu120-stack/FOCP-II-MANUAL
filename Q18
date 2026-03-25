@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Function to check if a string is a palindrome
+bool isPalindrome(const string& id) {
+    int left = 0;
+    int right = id.length() - 1;
+
+    while (left < right) {
+        if (id[left] != id[right]) {
+            return false; // Characters don't match
+        }
+        left++;
+        right--;
+    }
+
+    return true; // All characters matched
+}
+
+int main() {
+    string id;
+    cout << "Enter the ID: ";
+    cin >> id;
+
+    if (isPalindrome(id)) {
+        cout << "The ID is a palindrome." << endl;
+    } else {
+        cout << "The ID is not a palindrome." << endl;
+    }
+
+    return 0;
+}
