@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the number of sales figures: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "Invalid number of entries." << endl;
+        return 0;
+    }
+
+    double sales, maxSales;
+    cout << "Enter sales figure 1: ";
+    cin >> sales;
+    maxSales = sales; // Initialize maxSales with the first entry
+
+    // Loop through the remaining entries
+    for (int i = 2; i <= n; i++) {
+        cout << "Enter sales figure " << i << ": ";
+        cin >> sales;
+        if (sales > maxSales) {
+            maxSales = sales; // Update maxSales if current entry is larger
+        }
+    }
+
+    cout << "The largest sales figure is: " << maxSales << endl;
+
+    return 0;
+}
