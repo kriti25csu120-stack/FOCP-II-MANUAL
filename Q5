@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5, b = 10;
+
+    cout << "Before swap: a = " << a << ", b = " << b << endl;
+
+    int temp = a;  // store a in temp
+    a = b;         // assign b to a
+    b = temp;      // assign temp (original a) to b
+
+    cout << "After swap: a = " << a << ", b = " << b << endl;
+
+    return 0;
+}
