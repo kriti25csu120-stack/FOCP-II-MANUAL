@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int itemNo, quantity;
+    double unitPrice, totalAmount, discountedAmount;
+
+    // Input from user
+    cout << "Enter item number: ";
+    cin >> itemNo;
+
+    cout << "Enter quantity: ";
+    cin >> quantity;
+
+    cout << "Enter unit price: ";
+    cin >> unitPrice;
+
+    // Calculate total amount
+    totalAmount = quantity * unitPrice;
+
+    // Apply 20% discount
+    discountedAmount = totalAmount * 0.8;  // 20% discount means 80% of total
+
+    // Display the bill
+    cout << "\nItem No: " << itemNo << endl;
+    cout << "Quantity: " << quantity << endl;
+    cout << "Unit Price: $" << unitPrice << endl;
+    cout << "Total Amount before Discount: $" << totalAmount << endl;
+    cout << "Total Amount after 20% Discount: $" << discountedAmount << endl;
+
+    return 0;
+}
