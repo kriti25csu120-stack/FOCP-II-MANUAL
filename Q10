@@ -1,0 +1,31 @@
+#include <iostream>
+#include <cctype> // For isdigit() and tolower()
+
+using namespace std;
+
+int main() {
+    char ch;
+    cout << "Enter a single character: ";
+    cin >> ch;
+
+    // Check if the character is a digit
+    if (isdigit(ch)) {
+        cout << ch << " is a number." << endl;
+    }
+    // Check if the character is a letter
+    else if (isalpha(ch)) {
+        // Convert to lowercase to simplify vowel check
+        char lowerCh = tolower(ch);
+        if (lowerCh == 'a' || lowerCh == 'e' || lowerCh == 'i' || lowerCh == 'o' || lowerCh == 'u') {
+            cout << ch << " is a vowel." << endl;
+        } else {
+            cout << ch << " is a consonant." << endl;
+        }
+    }
+    // If it's neither a digit nor a letter
+    else {
+        cout << ch << " is neither a letter nor a number." << endl;
+    }
+
+    return 0;
+}
